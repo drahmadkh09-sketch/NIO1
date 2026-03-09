@@ -20,10 +20,6 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
-      - name: Install server dependencies
-        run: npm ci
-        working-directory: server
-
       - name: Build Mac DMG
         run: npm run pack:mac
 
