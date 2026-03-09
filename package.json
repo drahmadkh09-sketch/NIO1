@@ -2,6 +2,8 @@
   "name": "nio-intelligence-agent-command-centre",
   "private": true,
   "version": "0.2.0",
+  "description": "Nio Intelligence Agent Command Centre desktop app",
+  "author": "drahmadkh09-sketch",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {
@@ -9,7 +11,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron:dev": "npm run build && electron electron/main.cjs",
-    "pack:mac": "npm run build && electron-builder --mac dmg"
+    "pack:mac": "npm run build && electron-builder --mac dmg --publish never"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
@@ -39,12 +41,6 @@
       "dist/**/*",
       "electron/**/*",
       "package.json"
-    ],
-    "extraResources": [
-      {
-        "from": "server",
-        "to": "server"
-      }
     ],
     "mac": {
       "category": "public.app-category.productivity",
